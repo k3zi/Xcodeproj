@@ -16,6 +16,10 @@
   [joshdholtz](https://github.com/joshdholtz)
   [#656](https://github.com/CocoaPods/CocoaPods/pull/656)  
 
+* Ensure `GroupReference`'s path include's its parent `GroupReference`'s path
+  as long as the parent has a type of `group`.
+  [Kesi Maduka](https://github.com/k3zi)
+  [#657](https://github.com/CocoaPods/Xcodeproj/issues/657)
 
 ## 1.8.0 (2019-01-25)
 
