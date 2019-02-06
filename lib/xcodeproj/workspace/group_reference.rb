@@ -47,7 +47,9 @@ module Xcodeproj
         location_array = xml_node.attribute('location').value.split(':', 2)
         type = location_array.first
         location = location_array[1] || ''
-        location = prepend_parent_path(xml_node, location)
+        if type == 'group'
+          location = prepend_parent_path(xml_node, location)
+        end
         name = xml_node.attribute('name').value
         new(name, type, location)
       end

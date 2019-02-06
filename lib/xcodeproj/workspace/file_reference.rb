@@ -39,7 +39,9 @@ module Xcodeproj
       #
       def self.from_node(xml_node)
         type, path = xml_node.attribute('location').value.split(':', 2)
-        path = prepend_parent_path(xml_node, path)
+        if type == 'group'
+          path = prepend_parent_path(xml_node, path)
+        end
         new(path, type)
       end
 
